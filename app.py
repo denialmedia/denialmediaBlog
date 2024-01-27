@@ -25,4 +25,5 @@ def index():
     return render_template('index.html', content=html_content)
 
 if __name__ == '__main__':
-    app.run(debug=True, port=10000)
+    # Bind the app to 0.0.0.0 and the specified port for Render
+    app.run(debug=True, host='0.0.0.0', port=int(os.environ.get('PORT', 10000)))
