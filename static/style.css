@@ -1,0 +1,92 @@
+:root {
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --heading-color: #61dafb;
+    --link-color: #61dafb;
+    --code-background: #272822;
+    --code-color: #f8f8f2;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--heading-color);
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff6f61;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+ul, ol {
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+pre {
+    background-color: var(--code-background);
+    color: var(--code-color);
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+code {
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+}
+
+blockquote {
+    border-left: 3px solid var(--heading-color);
+    margin-left: 0;
+    padding-left: 10px;
+    color: #ccc;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #333;
+    margin: 20px 0;
+}
+
+
+/* Styles for "Show More" button and hidden content */
+.article .full-content {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.article.show-full .full-content {
+    display: block;
+    opacity: 1;
+}
