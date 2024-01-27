@@ -1,31 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&family=Space+Grotesk&display=swap');
+
 :root {
     --background-color: #121212;
     --text-color: #ffffff;
-    --heading-color: #61dafb;
-    --link-color: #61dafb;
+    --heading-color: #007292;
+    --subheading-color: #71aaa7;
+    --author-color: #4a6463;
+    --link-color: #81d0e6;
+    --accent-color: #ee1284;
     --code-background: #272822;
     --code-color: #f8f8f2;
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Rubik', sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    font-size: 2.5vh;
 }
 
 .container {
-    max-width: 800px;
+    max-width: 90%;
     margin: auto;
     padding: 20px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+header {
+    background-color: var(--background-color);
+    color: var(--heading-color);
+    text-align: center;
+    max-width: 90%;
+    margin: auto;
+    padding: 20px;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.accent {
+    color:var(--accent-color)
+}
+
+header h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    margin: 0;
+    text-align: left;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+h1 {
     color: var(--heading-color);
     margin-top: 20px;
     margin-bottom: 10px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2em; /* Adjust the font size for h1 */
+}
+
+h2 {
+    color: var(--subheading-color);
+    
+    
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.5em; /* Adjust the font size for h2 */
+}
+
+h3 {
+    color: var(--author-color);
+
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.2em; /* Adjust the font size for h3 */
+}
+
+h4 {
+    color: var(--author-color);
+    margin-top: -20px;
+    margin-bottom: 10px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: .7em; /* Adjust the font size for h4 */
 }
 
 a {
@@ -77,7 +150,6 @@ hr {
     border-top: 1px solid #333;
     margin: 20px 0;
 }
-
 
 /* Styles for "Show More" button and hidden content */
 .article .full-content {
