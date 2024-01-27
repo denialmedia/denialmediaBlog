@@ -21,6 +21,7 @@ def load_markdown_files(directory):
     - html_content: Concatenated HTML content of all Markdown files.
     """
     markdown_files = os.listdir(directory)
+    markdown_files.sort(reverse=True)  # Sort files in reverse order
     html_content = ""
     for file in markdown_files:
         if file.endswith('.md'):  # Check for .md file extension
